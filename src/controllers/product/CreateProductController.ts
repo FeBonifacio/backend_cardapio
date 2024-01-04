@@ -11,15 +11,14 @@ class CreateProductController{
             throw new Error("Produto sem foto")
         } else {
 
-            const { originalname, filename } = req.file;
+            const { originalname, filename: banner } = req.file;
 
-            console.log(filename)
 
             const product = await createProductService.execute({
                 name,
                 price,
                 description,
-                banner: '',
+                banner,
                 category_id
             });
     
