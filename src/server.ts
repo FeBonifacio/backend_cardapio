@@ -9,8 +9,9 @@ const app = express();
 
 // rotas estao aqui
 app.use(express.json());
+
+app.use(cors()) // para qualquer url acessar aplicação/ chamar sempre antes do router
 app.use(router);
-app.use(cors()) // para qualquer url acessar aplicação
 
 // Rota statica Para acessar foto
 app.use(
