@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
-    "dev": "ts-node-dev --transpile-only src/server.ts",
+    "dev": "ts-node-dev src/server.ts",
     "vercel-build": "npx prisma migrate deploy"
   },
   "devDependencies": {
